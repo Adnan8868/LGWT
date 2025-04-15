@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning and Growing with Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
+    }
+    header {
+      background-color: #4f46e5;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 36px;
+    }
+    header p {
+      font-size: 18px;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      background-color: #4f46e5;
+      color: white;
+      text-align: center;
+      padding: 60px 0;
+    }
+    #typed-text {
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .btn {
+      background-color: #3498db;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background-color: #2980b9;
+    }
+    h2 {
+      color: #1f2937;
+      border-bottom: 2px solid #4f46e5;
+      padding-bottom: 5px;
+      margin-top: 3rem;
+    }
+    .subject-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .subject-box {
+      background-color: white;
+      width: calc(33.333% - 20px);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      overflow: hidden;
+      position: relative;
+    }
+    .subject-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    .subject-box img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .subject-box:hover img {
+      transform: scale(1.1);
+    }
+    .subject-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .topic-list {
+      list-style-type: none;
+      padding: 0;
+      display: none;
+      margin-top: 20px;
+    }
+    .topic-item {
+      background: white;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .topic-link {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+      .subject-box {
+        width: calc(50% - 20px);
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .subject-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learning and Growing with Team</h1>
+    <p>By Muhammad Adnan</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2><span id="typed-text"></span></h2>
+      <p>Discover, learn, and grow with the best educational content for BS Computer Science students!</p>
+      <a href="#subjects" class="btn">Get Started</a>
+    </section>
+
+    <!-- Subjects content aapke existing HTML jaisa hoga yahan continue karein... -->
+    <div class="subject-boxes">
+      
+        <!-- CS101 Box -->
+        <div class="subject-box" onclick="toggleTopics('cs101-topics')">
+          <img src="cs 101.jpg" alt="CS101">
+          <div class="subject-name">CS101 - Introduction to Computing</div>
+          <ul id="cs101-topics" class="topic-list">
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID1/view" target="_blank">Topic 1: Introduction to Computers</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID2/view" target="_blank">Topic 2: Data Types and Variables</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID3/view" target="_blank">Topic 3: Operators and Expressions</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID4/view" target="_blank">Topic 4: Control Structures</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID5/view" target="_blank">Topic 5: Functions</a></li>
+          </ul>
+        </div>
+        
+        <!-- ENG101 Box -->
+        <div class="subject-box" onclick="toggleTopics('eng101-topics')">
+          <img src="eng 101.jpg" alt="ENG101">
+          <div class="subject-name">ENG101 - Functional English</div>
+          <ul id="eng101-topics" class="topic-list">
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID6/view" target="_blank">Topic 1: Parts of Speech</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID7/view" target="_blank">Topic 2: Sentence Structure</a></li>
+          </ul>
+        </div>
+  
+        <!-- MTH101 Box -->
+        <div class="subject-box" onclick="toggleTopics('mth101-topics')">
+          <img src="mth 101.jpg" alt="MTH101">
+          <div class="subject-name">MTH101 - Calculus & Analytical Geometry</div>
+          <ul id="mth101-topics" class="topic-list">
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID8/view" target="_blank">Topic 1: Limits</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID9/view" target="_blank">Topic 2: Derivatives</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID10/view" target="_blank">Topic 3: Integrals</a></li>
+          </ul>
+        </div>
+  
+        <!-- PAK301 Box -->
+        <div class="subject-box" onclick="toggleTopics('pak301-topics')">
+          <img src="pak 301.jpg" alt="PAK301">
+          <div class="subject-name">PAK301 - Pakistan Studies</div>
+          <ul id="pak301-topics" class="topic-list">
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID11/view" target="_blank">Topic 1: History of Pakistan</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID12/view" target="_blank">Topic 2: Geography of Pakistan</a></li>
+          </ul>
+        </div>
+  
+        <!-- PHY301 Box -->
+        <div class="subject-box" onclick="toggleTopics('phy301-topics')">
+          <img src="phy 301.jpg" alt="PHY301">
+          <div class="subject-name">PHY301 - Circuit Theory</div>
+          <ul id="phy301-topics" class="topic-list">
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID13/view" target="_blank">Topic 1: Ohm's Law</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID14/view" target="_blank">Topic 2: Kirchhoff's Laws</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID15/view" target="_blank">Topic 3: Circuit Analysis</a></li>
+          </ul>
+        </div>
+  
+        <!-- ISL201 Box -->
+        <div class="subject-box" onclick="toggleTopics('isl201-topics')">
+          <img src="isl 101.jpg" alt="ISL201">
+          <div class="subject-name">ISL201 - Islamic Studies</div>
+          <ul id="isl201-topics" class="topic-list">
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID16/view" target="_blank">Topic 1: Basic Concepts</a></li>
+            <li class="topic-item"><a class="topic-link" href="https://drive.google.com/file/d/yourfileID17/view" target="_blank">Topic 2: Life of Prophet Muhammad</a></li>
+          </ul>
+        </div>
+        
+      </div>
+  
+  </main>
+
+  <footer>
+    <p>© 2025 Muhammad Adnan. All rights reserved.</p>
+    <p>If you face any issue, feel free to <a class="whatsapp-link" href="https://wa.me/923196248868?text=Assalamualaikum%20Adnan%20Bhai%2C%20I%20need%20your%20help" target="_blank">Contact on WhatsApp</a></p>
+  </footer>
+
+  <script>
+    function toggleTopics(topicId) {
+      const topics = document.getElementById(topicId);
+      topics.style.display = (topics.style.display === "none" || topics.style.display === "") ? "block" : "none";
+    }
+
+    var typed = new Typed("#typed-text", {
+      strings: ["Hi, I'm Adnan", "Welcome to Learning and Growing with Team", "Explore BSCS Notes", "Get Help Anytime!"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+</body>
+</html>
